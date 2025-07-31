@@ -30,5 +30,25 @@ Un byte solo puede representar valores entre 0 y 255 (8 bits). Si intentas guard
 En Python, si usas una estructura como bytes, te dará un error:
 
 bytes([300])
-### ValueError: bytes must be in range(0, 256)
+#### ValueError: bytes must be in range(0, 256)
 Pero Python puede manejar números grandes sin problema en variables normales, porque internamente usa estructuras más complejas para almacenar enteros de cualquier tamaño.
+
+## Ejercicio adicional clase:  
+tenemos 3 archivos:  
+texto - 52794 caracteres  
+76931 - datos enteros  
+105230 - datos punto flotante  
+
+¿cuantos bytes?
+
+R//:  52,794 caracteres×1 byte= 52,794 bytes  
+76,931×4 bytes= 307,724 bytes  
+105,230×4 bytes= 420,920 bytes  
+total= 781,438 bytes  
+
+781,438/1,024= 763,123 KB​	  
+ 
+
+​	
+ 
+
