@@ -169,4 +169,8 @@ edad = (edad - 1)
 Fin si  
 mostrar "edad:", edad ,"años"  
 Fin  
-```   
+´´´   
+
+### Diagrama de flujo 
+
+![actividad repaso 5](./diagrama%20ejercicio%20repaso%205.drawio.png)      
