@@ -108,32 +108,40 @@ calcular cual fue el descuento aplicado y cuanto tiene que pagar la persona
 
 ## Pseudocodigo: 
 
-´´´
+ ´´´   
 inicio    
-leer cantidad_prendas   
-si cantidad_prendas >= 3    
+leer cantidad_prendas     
+si cantidad_prendas >= 3      
 
-   leer prenda_1    
+   leer prenda_1     
    leer prenda_2    
    leer prenda_3    
-       si prenda_1 > prenda_2 > prenda_3   
-            descuento = prenda_3 * 0.70 
-          si no prenda_2 + prenda_3 +prenda_1 = costo_total
-            
-            fin si   
+   
+si (prenda_1 <= prenda_2) y (prenda_1 <= prenda_3) entonces      
+            descuento = prenda_1 * 0.70   
 
-        si prenda_2 > prenda_3 > prenda_1  
-             descuento = prenda_1 * 0.70  
-             si no prenda_3 + prenda_1 + prenda_2 = costo_total
 
-             fin si 
+sino si (prenda_2 <= prenda_3) y (prenda_2 <= prenda_1) entonces   
+             descuento = prenda_2 * 0.70    
+  
 
-        si prenda_3 > prenda_1 > prenda_2  
-             descuento = prenda_2 * 0.70  
-                          
-fin si   
-costo_total = prenda_menor_costo * 0.70  
-mostrar costo_total  
+sino si (prenda_3 <= prenda_1) y (prenda_3 <= prenda_2) entonces   
+             descuento = prenda_3 * 0.70    
+
+fin si  
+   
+costo_total = ( prenda_1 + prenda_2 + prenda_3 ) - descuento  
+mostrar "El descuento aplicado es: ", descuento  
+        mostrar "El total a pagar es: ", costo_total  
+
+ sino  
+        mostrar "La promoción aplica solo para 3 o más prendas"  
+  fin si   
 fin  
 
-´´´  
+´´´   
+
+![actividad repaso 4](.)  
+
+
+
