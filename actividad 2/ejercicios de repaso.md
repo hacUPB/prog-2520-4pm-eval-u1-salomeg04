@@ -141,7 +141,32 @@ fin
 
 ´´´   
 
-![actividad repaso 4](.)  
+### Diagrama de flujo  
 
+![actividad repaso 4](./Diagrama%20ejercicio%20repaso%204.drawio.png)    
 
+## ejercicio 5:
+preguntar fecha de nacimiento y fecha actual y decir cuantos años tiene
 
+## Pseudocodigo: 
+
+´´´  
+inicio  
+escribir "ingrese su fecha de nacimiento:"  
+leer dia_nac  
+leer mes_nac  
+leer año_nac      
+
+escribir "ingrese la fecha actual:"  
+leer dia_act  
+leer mes_act   
+leer año_act    
+
+edad = (año_act - año_nac)  
+
+Si (mes_act <= mes_nac) y (dia_act < dia_nac) Entonces  
+edad = (edad - 1)  
+Fin si  
+mostrar "edad:", edad ,"años"  
+Fin  
+```   
