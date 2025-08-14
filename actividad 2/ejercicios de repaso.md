@@ -20,7 +20,7 @@ Realice un algoritmo para determinar cuánto se debe pagar por equis cantidad de
 
 ### Pseudocodigo
 
-´´´  
+```  
 inicio  
 leer cantidad_de_lapices   
 si cantidad_de_lapices >=1000  
@@ -32,7 +32,7 @@ precio = valor_unidad * cantidad_de_lapices
 escribir "valor total: ", precio   
 fin  
 
-´´´  
+```    
 ### Diagrama de flujo
 
 ![actividad repaso 1](./Diagrama%20ejercicio%20repaso%201.drawio.png)  
@@ -59,7 +59,7 @@ Un almacén de ropa tiene una promoción: por compras superiores a $250 000 se l
 
 ## Pseudocodigo:
 
-´´´  
+```    
 inicio  
 leer valor_compra  
 si valor_compra > 250000  
@@ -71,7 +71,7 @@ precio_final = valor_compra - descuento
 mostrar "valor a pagar: $ ", precio_final  
 fin  
 
-´´´  
+```   
 
 ### Diagrama de flujo
 
@@ -83,7 +83,7 @@ El director de una escuela está organizando un viaje de estudios, y requiere de
 
 ## Pseudocodigo:
 
-´´´  
+```    
 inicio  
 leer alumnos  
 si alumnos >= 100  
@@ -99,7 +99,7 @@ costo_total = alumnos * costo alumno
 mostar costo_total / costo_alumno  
 fin    
 
-´´´    
+```      
 ![actividad repaso 3](./Diagrama%20ejercicio%20repaso%203.drawio.png)  
 
 ## ejercicio 4:
@@ -108,32 +108,71 @@ calcular cual fue el descuento aplicado y cuanto tiene que pagar la persona
 
 ## Pseudocodigo: 
 
-´´´
+```    
 inicio    
-leer cantidad_prendas   
-si cantidad_prendas >= 3    
 
-   leer prenda_1    
-   leer prenda_2    
-   leer prenda_3    
-       si prenda_1 > prenda_2 > prenda_3   
-            descuento = prenda_3 * 0.70 
-          si no prenda_2 + prenda_3 +prenda_1 = costo_total
-            
-            fin si   
+  leer cantidad_prendas   
+  si cantidad_prendas >= 3      
 
-        si prenda_2 > prenda_3 > prenda_1  
-             descuento = prenda_1 * 0.70  
-             si no prenda_3 + prenda_1 + prenda_2 = costo_total
+     leer prenda_1     
+     leer prenda_2    
+     leer prenda_3    
+   
+    si (prenda_1 <= prenda_2) y (prenda_1 <= prenda_3) entonces      
+            descuento = prenda_1 * 0.70   
 
-             fin si 
 
-        si prenda_3 > prenda_1 > prenda_2  
-             descuento = prenda_2 * 0.70  
-                          
-fin si   
-costo_total = prenda_menor_costo * 0.70  
-mostrar costo_total  
-fin  
+    sino si (prenda_2 <= prenda_3) y (prenda_2 <= prenda_1) entonces   
+             descuento = prenda_2 * 0.70    
+  
 
-´´´  
+    sino si (prenda_3 <= prenda_1) y (prenda_3 <= prenda_2) entonces   
+             descuento = prenda_3 * 0.70    
+
+    fin si  
+   
+    costo_total = ( prenda_1 + prenda_2 + prenda_3 ) - descuento  
+    mostrar "El descuento aplicado es: ", descuento  
+        mostrar "El total a pagar es: ", costo_total  
+
+    sino  
+        mostrar "La promoción aplica solo para 3 o más prendas"  
+     fin si   
+    fin  
+
+```   
+
+### Diagrama de flujo  
+
+![actividad repaso 4](./Diagrama%20ejercicio%20repaso%204.drawio.png)    
+
+## ejercicio 5:
+preguntar fecha de nacimiento y fecha actual y decir cuantos años tiene
+
+## Pseudocodigo: 
+
+```   
+inicio  
+
+escribir "ingrese su fecha de nacimiento:"  
+leer dia_nac  
+leer mes_nac  
+leer año_nac      
+
+    escribir "ingrese la fecha actual:"  
+    leer dia_act  
+    leer mes_act   
+    leer año_act    
+
+    edad = (año_act - año_nac)  
+
+    Si (mes_act <= mes_nac) y (dia_act < dia_nac) Entonces  
+    edad = (edad - 1)  
+    Fin si  
+    mostrar "edad:", edad ,"años"  
+    Fin  
+```   
+ 
+### Diagrama de flujo 
+
+![actividad repaso 5](./diagrama%20ejercicio%20repaso%205.drawio.png)      
